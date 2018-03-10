@@ -11,18 +11,19 @@ This section describes their prototypes.
 
 ```C++
 namespace Arcade {
+	template<typename T>
 	class Vect {
 	public:
-		Vect(int x = 0, int y = 0);
-		void setXY(int x = 0, int y = 0);
-		void setX(int x = 0);
-		void setY(int y = 0);
-		int getX() const;
-		int getY() const;
+		Vect(T x = 0, T y = 0);
+		void setXY(T x = 0, T y = 0);
+		void setX(T x = 0);
+		void setY(T y = 0);
+		T getX() const;
+		T getY() const;
 
 	private:
-		int _x;
-		int _y;
+		T _x;
+		T _y;
 	};
 
 	class Color {
@@ -83,10 +84,8 @@ namespace Arcade {
 	private:
 		void *_sprite;
 		Color _color;
-		size_t _h;
-		size_t _w;
-		size_t _posh;
-		size_t _posw;
+		Vect<size_t> _size
+		Vect<size_t> _pos;
 	};
 
 	class TextBox {
@@ -112,10 +111,8 @@ namespace Arcade {
 	private:
 		std::string _value;
 		void *_font;
-		size_t _h;
-		size_t _w;
-		size_t _posh;
-		size_t _posw;
+		Vect<size_t> _size;
+		Vect<size_t> _pos;
 	};
 };
 ```
@@ -165,7 +162,7 @@ namespace Arcade {
 		void cleanEvent();   // Deletes the last event
 
 		/* Context Info */
-		Vect getScreenSize() const; // get the X and Y max of the windows
+		Vect<size_t> getScreenSize() const; // get the X and Y max of the windows
 		int getMaxY() const;        // get the Y max of the windows
 		int getMaxX() const;        // get the X max of the windows
 	};
