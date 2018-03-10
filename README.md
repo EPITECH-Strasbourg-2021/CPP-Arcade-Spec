@@ -23,7 +23,7 @@ namespace Arcade {
 	private:
 		int _x;
 		int _y;
-	}
+	};
 
 	class Color {
 	public:
@@ -48,44 +48,11 @@ namespace Arcade {
 	};
 
 	enum Keys {
-		A,
-		B,
-		C,
-		D,
-		E,
-		F,
-		G,
-		H,
-		I,
-		J,
-		K,
-		L,
-		M,
-		N,
-		O,
-		P,
-		Q,
-		R,
-		S,
-		T,
-		U,
-		V,
-		W,
-		X,
-		Y,
-		Z,
-		LEFT,
-		RIGHT,
-		UP,
-		DOWN,
-		ENTER,
-		SPACE,
-		DELETE,
-		BACKSPACE,
-		TAB,
-		ESC,
-		MOUSELEFT,
-		MOUSERIGHT
+		A, B, C, D, E, F, G, H, I, J, K, L, M,
+		N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
+		LEFT, RIGHT, UP, DOWN,
+		ENTER, SPACE, DELETE, BACKSPACE, TAB, ESC,
+		MOUSELEFT, MOUSERIGHT
 	};
 };
 ```
