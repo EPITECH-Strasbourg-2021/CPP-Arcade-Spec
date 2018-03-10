@@ -79,7 +79,9 @@ namespace Arcade {
 		void setPosW(size_t posW);
 
 		void setColor(Color &color);
+		Color &getColor();
 		void setSprite(void *sprite);
+		void *getSprite();
 
 	private:
 		void *_sprite;
