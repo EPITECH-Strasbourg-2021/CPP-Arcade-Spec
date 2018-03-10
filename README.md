@@ -150,9 +150,9 @@ namespace Arcade {
 		void drawText(TextBox *);       // Draws a TextBox
 
 		/* Sound functions */
-		void playSound(void *);  // Plays sound in arg
-		void pauseSound(void *); // Pauses sound in arg
-		void stopSound(void *);  // Stops sound in arg
+		void playSound(void *);  // Plays sound passed in arg
+		void pauseSound(void *); // Pauses sound passed in arg
+		void stopSound(void *);  // Stops sound passed in arg
 
 		/* Loading functions */
 		void *loadTextFont(std::string path);   // Returns a text font in the Graphics library format or NULL if not supported
