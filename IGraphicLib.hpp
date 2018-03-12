@@ -19,6 +19,9 @@ namespace Arcade {
 		IGraphicLib() {};
 		virtual ~IGraphicLib() = 0;
 
+		/* Get the name of the library */
+		virtual std::string getName() = 0;
+
 		/* Module info: Used to optimize initialization */
 		virtual bool supportSprite() const = 0;
 		virtual bool supportSound() const = 0;

@@ -7,11 +7,15 @@
 
 #pragma once
 
+#include <string>
 #include "IGraphicLib.hpp"
 
 namespace Arcade {
 	class IGameModule {
 	public:
+		/* Get the name of the game */
+		virtual std::string getName() = 0;
+
 		/* Resource Handling */
 		// Initializes the Graphics library for this game
 		virtual void loadRessource(IGraphicLib *graphicsLib) = 0;
