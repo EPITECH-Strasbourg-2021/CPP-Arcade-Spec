@@ -9,8 +9,8 @@ Your function for the entry point of the library must be named `entryPoint`
 
 ## Utilities
 
-The protocol will be referring to a few primitives for representing things like Vectors and Colors.
-This section describes their prototypes.
+The protocol will be referring to a few primitives for representing things like Vectors and Colors.  
+This section describes their prototypes.  
 
 ***Files:** [Vect.hpp](https://github.com/EPITECH-Strasbourg-2021/CPP-Arcade-Spec/blob/master/Vect.hpp) / [Color.hpp](https://github.com/EPITECH-Strasbourg-2021/CPP-Arcade-Spec/blob/master/Color.hpp) / [Keys.hpp](https://github.com/EPITECH-Strasbourg-2021/CPP-Arcade-Spec/blob/master/Keys.hpp)*
 
