@@ -89,7 +89,7 @@ namespace Arcade {
 		virtual Keys getLastEvent() = 0;
 		
 		// Saves the event in the Graphics library
-		virtual void pollEvent() = 0;
+		virtual bool pollEvent() = 0;
 		
 		// Deletes the last event
 		virtual void cleanEvent() = 0;
