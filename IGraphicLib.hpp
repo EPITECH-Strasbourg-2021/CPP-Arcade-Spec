@@ -41,7 +41,9 @@ namespace Arcade {
 		
 		// Clears the screen
 		virtual void clearWindow() = 0;
-
+		
+		// Displays the buffered frame to the screen
+		virtual void refreshWindow() = 0;
 		
 		/* Resources handling */
 		// Initializes the library
