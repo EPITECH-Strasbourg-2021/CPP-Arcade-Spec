@@ -26,5 +26,5 @@ void out()
 
 extern "C" Arcade::IGraphicLib *entryPoint()
 {
-	return reinterpret_cast<Arcade::IGraphicLib *>(ret);
+	return ret;
 }
