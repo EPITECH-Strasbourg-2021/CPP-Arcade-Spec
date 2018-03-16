@@ -20,7 +20,7 @@ namespace Arcade {
 		void setXY(T x = 0, T y = 0)
 		{
 			setX(x);
-			setY(x);
+			setY(y);
 		};
 
 		void setX(T x = 0)
