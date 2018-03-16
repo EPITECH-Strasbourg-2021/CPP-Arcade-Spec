@@ -23,7 +23,7 @@ namespace Arcade {
 
 		size_t getH() const;
 		size_t getPosH() const;
-		void setH(size_t heigh);
+		void setH(size_t height);
 		void setPosH(size_t posH);
 
 		size_t getW() const;
