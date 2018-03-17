@@ -16,20 +16,20 @@ namespace Arcade {
 	public:
 		PixelBox(size_t height, size_t width, size_t posW,
 			size_t posH);
-		size_t &getHeight() const;
-		size_t &getY() const;
+		size_t getHeight() const;
+		size_t getY() const;
 		void setHeight(size_t height);
 		void setY(size_t y);
 
-		size_t &getWidth() const;
-		size_t &getX() const;
+		size_t getWidth() const;
+		size_t getX() const;
 		void setWidth(size_t width);
 		void setX(size_t x);
 
 		void putPixel(Vect<size_t> pos, Color col);
-		Color &getPixel(Vect<size_t> pos) const;
+		Color getPixel(Vect<size_t> pos) const;
 
-		const Color *getPixels() const;
+		const Color *const getPixels() const;
 	private:
 		Color *_colorTab;
 		Vect<size_t> _size;
