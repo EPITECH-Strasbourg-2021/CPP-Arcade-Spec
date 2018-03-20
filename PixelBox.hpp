@@ -31,7 +31,7 @@ namespace Arcade {
 		void putPixel(Vect<size_t> pos, Color col);
 		Color getPixel(Vect<size_t> pos) const;
 
-		std::vector<Color> &getPixelArray();
+		std::vector<Color> getPixelArray();
 		std::map<Vect<size_t>, Color> &getPixelMap();
 	private:
 		std::map<Vect<size_t>, Color> _colorTab;
