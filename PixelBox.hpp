@@ -8,6 +8,8 @@
 #pragma once
 
 #include <string>
+#include <map>
+#include <vector>
 #include "Color.hpp"
 #include "Vect.hpp"
 
@@ -29,9 +31,10 @@ namespace Arcade {
 		void putPixel(Vect<size_t> pos, Color col);
 		Color getPixel(Vect<size_t> pos) const;
 
-		const Color *const getPixels() const;
+		std::vector<Color> &getPixelArray();
+		std::map<Vect<size_t>, Color> &getPixelMap();
 	private:
-		Color *_colorTab;
+		std::map<Vect<size_t>, Color> _colorTab;
 		Vect<size_t> _size;
 		Vect<size_t> _pos;
 	};
