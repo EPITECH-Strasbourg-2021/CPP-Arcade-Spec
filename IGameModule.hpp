@@ -22,12 +22,11 @@ namespace Arcade {
 		// Unloads the Graphics library for this game
 		virtual void freeRessource(IGraphicLib *graphicsLib) = 0;
 
-
 		/* Rendering functions */
 		// Updates the game state according to the player inputs
 		virtual void update(IGraphicLib *graphicsLib) = 0;
 
 		// Renders the game state to the screen
-		virtual void render(IGraphicLib *graphicsLib) = 0;
+		virtual PixelBox render() = 0;
 	};
 };
