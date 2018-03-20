@@ -18,6 +18,15 @@ namespace Arcade {
 		/* Get the name of the game */
 		virtual std::string getName() = 0;
 
+
+		/* Resources handling */
+		// Initializes the library
+		virtual bool initGame() = 0;
+		
+		// Unloads the library
+		virtual bool stopGame() = 0;
+
+
 		// Main loop of the game, called by a while in the core
 		// Returns false if the game has to be ended
 		virtual bool loop(IGraphicLib *graphicsLib) = 0;
