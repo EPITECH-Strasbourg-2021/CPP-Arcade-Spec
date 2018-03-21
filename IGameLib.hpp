@@ -13,7 +13,7 @@ namespace Arcade {
 	class IGameLib {
 	public:
 		IGameLib() {};
-		virtual ~IGameLib() {};
+		virtual ~IGameLib() = default;
 
 		/* Get the name of the game */
 		virtual std::string getName() = 0;
