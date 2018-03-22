@@ -16,7 +16,7 @@
 namespace Arcade {
 	class IGraphicLib {
 	public:
-		IGraphicLib() {};
+		IGraphicLib() = default;
 		virtual ~IGraphicLib() = 0;
 
 		/* Get the name of the library */
