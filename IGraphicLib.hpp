@@ -16,11 +16,10 @@
 namespace Arcade {
 	class IGraphicLib {
 	public:
-		IGraphicLib() {};
 		virtual ~IGraphicLib() = 0;
 
 		/* Get the name of the library */
-		virtual std::string getName() = 0;
+		virtual const std::string getName() const = 0;
 
 		/* Module info: Used to optimize initialization */
 		virtual bool supportSprite() const = 0;
