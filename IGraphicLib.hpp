@@ -19,7 +19,7 @@ namespace Arcade {
 		virtual ~IGraphicLib() = default;
 
 		/* Get the name of the library */
-		virtual const std::string &getName() const = 0;
+		virtual std::string getName() const = 0;
 
 		/* Window handling */
 		// Main loop condition
