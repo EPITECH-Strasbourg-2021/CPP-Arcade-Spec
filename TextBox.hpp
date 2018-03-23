@@ -13,8 +13,9 @@
 namespace Arcade {
 	class TextBox {
 	public:
-		TextBox(std::string const &text, Vect<size_t> size,
-			Vect<size_t> pos);
+		TextBox(std::string const &text = "",
+			Vect<size_t> size = Vect<size_t>(),
+			Vect<size_t> pos = Vect<size_t>());
 		~TextBox() = default;
 
 		const std::string &getValue() const;
