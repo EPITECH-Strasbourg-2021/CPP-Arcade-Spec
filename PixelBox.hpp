@@ -33,10 +33,9 @@ namespace Arcade {
 		void putPixel(Vect<size_t> pos, Color col);
 		Color getPixel(Vect<size_t> pos);
 
-		std::vector<Color> getPixelArray();
-		std::unordered_map<Vect<size_t>, Color> &getPixelMap();
+		std::vector<Color> &getPixelArray();
 	private:
-		std::unordered_map<Vect<size_t>, Color> _colorTab;
+		std::vector<Color> _colorFrame;
 		Vect<size_t> _size;
 		Vect<size_t> _pos;
 	};
