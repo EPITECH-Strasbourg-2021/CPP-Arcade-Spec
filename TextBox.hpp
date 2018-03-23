@@ -8,6 +8,7 @@
 #pragma once
 
 #include <string>
+#include "Color.hpp"
 #include "Vect.hpp"
 
 namespace Arcade {
@@ -29,8 +30,11 @@ namespace Arcade {
 		void setW(size_t width);
 		void setPosW(size_t posW);
 
+		Color getColor() const;
+		void setColor(Color color);
 	private:
 		std::string _value;
+		Color _color;
 		Vect<size_t> _size;
 		Vect<size_t> _pos;
 	};
