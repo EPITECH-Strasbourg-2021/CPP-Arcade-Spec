@@ -16,7 +16,7 @@ namespace Arcade {
 		TextBox(std::string const &text, size_t h, size_t w,
 			size_t posH, size_t posW);
 		~TextBox() = default;
-		std::string getValue() const;
+		const std::string &getValue() const;
 		void setValue(std::string const &text);
 
 		void *getFont() const;
