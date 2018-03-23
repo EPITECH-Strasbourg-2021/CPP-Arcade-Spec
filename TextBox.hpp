@@ -19,9 +19,6 @@ namespace Arcade {
 		std::string getValue() const;
 		void setValue(std::string const &text);
 
-		void *getFont() const;
-		void setFont(void *font);
-
 		size_t getH() const;
 		size_t getPosH() const;
 		void setH(size_t height);
@@ -34,7 +31,6 @@ namespace Arcade {
 
 	private:
 		std::string _value;
-		void *_font;
 		Vect<size_t> _size;
 		Vect<size_t> _pos;
 	};
