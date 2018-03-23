@@ -8,7 +8,6 @@
 #pragma once
 
 #include <string>
-#include <unordered_map>
 #include <vector>
 #include "Color.hpp"
 #include "Vect.hpp"
