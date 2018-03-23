@@ -15,8 +15,8 @@
 namespace Arcade {
 	class PixelBox {
 	public:
-		PixelBox(size_t height, size_t width, size_t posW,
-			size_t posH);
+		PixelBox(Vect<size_t> size = Vect<size_t>(),
+			Vect<size_t> pos = Vect<size_t>());
 		~PixelBox() = default;
 
 		size_t getHeight() const;
@@ -33,6 +33,7 @@ namespace Arcade {
 		Color getPixel(Vect<size_t> pos);
 
 		std::vector<Color> &getPixelArray();
+
 	private:
 		std::vector<Color> _colorFrame;
 		Vect<size_t> _size;
