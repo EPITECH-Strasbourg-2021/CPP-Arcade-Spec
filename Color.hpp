@@ -22,6 +22,7 @@ namespace Arcade {
 		void setGreen(unsigned char green);
 		void setBlue(unsigned char blue);
 		void setAlpha(unsigned char alpha);
+		operator unsigned char *();
 
 	private:
 		unsigned char _red;
