@@ -19,6 +19,7 @@ namespace Arcade {
 			Color color = Color(255, 255, 255, 255),
 			Color backgroundColor = Color(0, 0, 0, 255));
 		~TextBox() = default;
+
 		const std::string &getValue() const;
 		void setValue(std::string const &text);
 

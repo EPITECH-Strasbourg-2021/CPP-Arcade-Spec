@@ -8,7 +8,6 @@
 #pragma once
 
 #include <string>
-#include <unordered_map>
 #include <vector>
 #include "Color.hpp"
 #include "Vect.hpp"
@@ -16,8 +15,9 @@
 namespace Arcade {
 	class PixelBox {
 	public:
-		PixelBox(size_t height, size_t width, size_t posW,
-			size_t posH);
+		PixelBox(Vect<size_t> size = Vect<size_t>(),
+			Vect<size_t> pos = Vect<size_t>(),
+			Color col = Color(255, 255, 255, 255));
 		~PixelBox() = default;
 
 		size_t getHeight() const;
@@ -30,10 +30,18 @@ namespace Arcade {
 		void setWidth(size_t width);
 		void setX(size_t x);
 
+		Vect<size_t> getSize() const;
+		void setSize(Vect<size_t> size);
+		Vect<size_t> getPos() const;
+		void setPos(Vect<size_t> pos);
+
 		void putPixel(Vect<size_t> pos, Color col);
-		Color getPixel(Vect<size_t> pos);
+		Color getPixel(Vect<size_t> pos) const;
+
+		void putRect(Vect<size_t> pos, Vect<size_t> size, Color col);
 
 		std::vector<Color> &getPixelArray();
+
 	private:
 		std::vector<Color> _colorFrame;
 		Vect<size_t> _size;
