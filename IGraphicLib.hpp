@@ -27,24 +27,16 @@ namespace Arcade {
 
 		
 		// Closes the window => stop loop (go menu)
-		virtual bool closeRendering() = 0;
-		
+		virtual void closeRenderer() = 0;
+
 		// Opens the window => start loop
-		virtual bool openRendering() = 0;
-		
+		virtual void openRenderer() = 0;
+
 		// Clears the screen
 		virtual void clearWindow() = 0;
 		
 		// Displays the buffered frame to the screen
 		virtual void refreshWindow() = 0;
-		
-		/* Resources handling */
-		// Initializes the library
-		virtual bool initRenderer() = 0;
-		
-		// Unloads the library
-		virtual bool stopRenderer() = 0;
-
 		
 		/* Rendering functions */
 		// Draws a PixelBox or the sprite if supported
@@ -53,16 +45,16 @@ namespace Arcade {
 		// Draws a TextBox
 		virtual void drawText(TextBox &) = 0;
 
-		
+
 		/* Events handling */
 		// Gets the last saved event (used in render loop)
 		virtual Keys getLastEvent() = 0;
 		
 		// Saves the event in the Graphics library
-		virtual bool pollEvent() = 0;
+		virtual bool pollEvents() = 0;
 		
 		// Deletes the last event
-		virtual void cleanEvent() = 0;
+		virtual void cleanEvents() = 0;
 
 		
 		/* Context Info */
