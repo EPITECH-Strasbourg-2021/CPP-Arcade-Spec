@@ -59,7 +59,7 @@ namespace Arcade {
 		/* */
 		virtual bool pollEvents() = 0;
 		virtual Keys getLastEvent() = 0;
-		virtual void cleanEvents() = 0;
+		virtual void clearEvents() = 0;
 
 		/* Context Info */
 		// get the X and Y max of the windows
