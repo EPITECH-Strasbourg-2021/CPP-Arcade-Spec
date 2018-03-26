@@ -25,7 +25,6 @@ namespace Arcade {
 		// Main loop condition
 		virtual bool isOpen() const = 0;
 
-
 		// Closes the window => stop loop (go menu)
 		virtual void closeRenderer() = 0;
 
@@ -45,7 +44,6 @@ namespace Arcade {
 		// Draws a TextBox
 		virtual void drawText(TextBox &) = 0;
 
-
 		/* EVENT HANDLING */
 		/* */
 		/* This part can seem complicated but the implementation is quite simple. */
@@ -63,7 +61,6 @@ namespace Arcade {
 		virtual Keys getLastEvent() = 0;
 		virtual void cleanEvents() = 0;
 
-		
 		/* Context Info */
 		// get the X and Y max of the windows
 		virtual Vect<size_t> getScreenSize() const = 0;
