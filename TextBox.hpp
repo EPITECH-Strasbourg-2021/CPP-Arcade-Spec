@@ -8,38 +8,43 @@
 #pragma once
 
 #include <string>
+#include "Color.hpp"
 #include "Vect.hpp"
 
 namespace Arcade {
 	class TextBox {
 	public:
-		TextBox(std::string const &text = "",
-			Vect<size_t> size = Vect<size_t>(),
-			Vect<size_t> pos = Vect<size_t>());
+		TextBox(std::string const &text, Vect<size_t> pos,
+			size_t fontSize = 30,
+			Color color = Color(255, 255, 255, 255),
+			Color backgroundColor = Color(0, 0, 0, 255));
 		~TextBox() = default;
 
 		const std::string &getValue() const;
 		void setValue(std::string const &text);
 
-		size_t getHeight() const;
-		size_t getY() const;
-		void setHeight(size_t height);
-		void setY(size_t y);
-
-		size_t getWidth() const;
-		size_t getX() const;
-		void setWidth(size_t width);
-		void setX(size_t x);
-
 		Vect<size_t> getPos() const;
 		void setPos(Vect<size_t> pos);
 
-		Vect<size_t> getSize() const;
-		void setSize(Vect<size_t> size);
+		size_t getX() const;
+		size_t getY() const;
+		void setX(size_t x);
+		void setY(size_t y);
+
+		size_t getFontSize() const;
+		void setFontSize(size_t size);
+
+		Color getColor() const;
+		void setColor(Color color);
+
+		Color getBackgroundColor() const;
+		void setBackgroundColor(Color color);
 
 	private:
 		std::string _value;
-		Vect<size_t> _size;
 		Vect<size_t> _pos;
+		size_t _size;
+		Color _color;
+		Color _bgColor;
 	};
 };
