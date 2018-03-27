@@ -54,14 +54,3 @@ namespace Arcade {
 		T _y;
 	};
 };
-
-namespace std {
-	template <>
-	struct hash<Arcade::Vect<size_t>> {
-		std::size_t operator()(const Arcade::Vect<size_t> &v) const
-		{
-			return ((hash<size_t>()(v.getX()) ^
-					(hash<size_t>()(v.getY())) >> 1));
-		}
-	};
-}
