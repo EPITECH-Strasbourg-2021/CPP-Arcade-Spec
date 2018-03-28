@@ -15,9 +15,7 @@ namespace Arcade {
 	class TextBox {
 	public:
 		TextBox(std::string const &text, Vect<size_t> pos,
-			size_t fontSize = 30,
-			Color color = Color(255, 255, 255, 255),
-			Color backgroundColor = Color(0, 0, 0, 255));
+			size_t fontSize = 30);
 		~TextBox() = default;
 
 		const std::string &getValue() const;
