@@ -44,11 +44,106 @@ namespace Arcade {
 			return _y;
 		};
 
-
 		bool operator==(const Vect<T> &other) const
 		{
 			return (_x == other._x && _y == other._y);
 	    	}
+
+		Vect<T> operator+(const Vect<T> &other) const
+		{
+			return Vect<T>(_x + other._x, _y + other._y);
+		}
+
+		Vect<T> operator-(const Vect<T> &other) const
+		{
+			return Vect<T>(_x - other._x, _y - other._y);
+		}
+
+		Vect<T> operator*(const Vect<T> &other) const
+		{
+			return Vect<T>(_x * other._x, _y * other._y);
+		}
+
+		Vect<T> operator/(const Vect<T> &other) const
+		{
+			return Vect<T>(_x / other._x, _y / other._y);
+		}
+
+		Vect<T> &operator+=(const Vect<T> &other)
+		{
+			_x += other._x;
+			_y += other._y;
+			return *this;
+		}
+
+		Vect<T> &operator-=(const Vect<T> &other)
+		{
+			_x -= other._x;
+			_y -= other._y;
+			return *this;
+		}
+
+		Vect<T> &operator*=(const Vect<T> &other)
+		{
+			_x *= other._x;
+			_y *= other._y;
+			return *this;
+		}
+
+		Vect<T> &operator/=(const Vect<T> &other)
+		{
+			_x /= other._x;
+			_y /= other._y;
+			return *this;
+		}
+
+		Vect<T> operator+(const T &other) const
+		{
+			return Vect<T>(_x + other, _y + other);
+		}
+
+		Vect<T> operator-(const T &other) const
+		{
+			return Vect<T>(_x - other, _y - other);
+		}
+
+		Vect<T> operator*(const T &other) const
+		{
+			return Vect<T>(_x * other, _y * other);
+		}
+
+		Vect<T> operator/(const T &other) const
+		{
+			return Vect<T>(_x / other, _y / other);
+		}
+
+		Vect<T> &operator+=(const T &other)
+		{
+			_x += other;
+			_y += other;
+			return *this;
+		}
+
+		Vect<T> &operator-=(const T &other)
+		{
+			_x -= other;
+			_y -= other;
+			return *this;
+		}
+
+		Vect<T> &operator*=(const T &other)
+		{
+			_x *= other;
+			_y *= other;
+			return *this;
+		}
+
+		Vect<T> &operator/=(const T &other)
+		{
+			_x /= other;
+			_y /= other;
+			return *this;
+		}
 	private:
 		T _x;
 		T _y;
