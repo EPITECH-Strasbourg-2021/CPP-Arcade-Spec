@@ -38,6 +38,6 @@ namespace Arcade {
 		virtual void update() = 0;
 		
 		// Renders the game state to the screen. This should call IGraphicLib::refresh() to display content to the user.
-		virtual void refresh(IGraphicLib *graphicLib) = 0;
+		virtual void refresh(IGraphicLib &graphicLib) = 0;
 	};
 };
