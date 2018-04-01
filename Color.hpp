@@ -23,6 +23,7 @@ namespace Arcade {
 		void setBlue(unsigned char blue);
 		void setAlpha(unsigned char alpha);
 		operator unsigned char *();
+		bool operator==(const Arcade::Color &other) const;
 
 	private:
 		unsigned char _red;
