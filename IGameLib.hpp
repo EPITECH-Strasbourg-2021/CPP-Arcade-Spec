@@ -28,10 +28,10 @@ namespace Arcade {
 		virtual bool stop() = 0;
 
 		// Processes the key obtained by the IGraphicLib from the user to update the game state
-		virtual void applyEvent(Keys key) = 0;
+		virtual bool applyEvent(Keys key) = 0;
 		
 		// Updates the game state. (Move the player forward and/or move the NPCs)
-		virtual void update() = 0;
+		virtual bool update() = 0;
 		
 		// Renders the game state to the screen. This should call IGraphicLib::refresh() to display content to the user.
 		virtual void refresh(IGraphicLib &graphicLib) = 0;
