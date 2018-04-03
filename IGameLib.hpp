@@ -16,9 +16,6 @@ namespace Arcade {
 
 		/* Get the name of the game */
 		virtual const std::string getName() const = 0;
-
-		/* Set the player name */
-		virtual void setPlayerName(const std::string &name) = 0;
 		
 		/* Resources handling */
 		// Initializes the library
