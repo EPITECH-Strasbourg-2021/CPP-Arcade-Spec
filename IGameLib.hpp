@@ -37,6 +37,6 @@ namespace Arcade {
 		virtual void refresh(IGraphicLib &graphicLib) = 0;
 		
 		// To call at the end of the execution of the game (after the player loose or win) for getting his score
-		virtual size_t getScore();
+		virtual size_t getScore() = 0;
 	};
 };
