@@ -41,5 +41,8 @@ namespace Arcade {
 		
 		// Renders the game state to the screen. This should call IGraphicLib::refresh() to display content to the user.
 		virtual void refresh(IGraphicLib &graphicLib) = 0;
+		
+		// To call at the end of the execution of the game (after the player loose or win) for getting his score
+		virtual size_t getScore();
 	};
 };
