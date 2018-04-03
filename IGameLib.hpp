@@ -27,12 +27,6 @@ namespace Arcade {
 		// Unloads the library
 		virtual bool stop() = 0;
 
-		// Closes the game => stop loop (go menu)
-		virtual bool close() = 0;
-
-		// Opens the game => start loop
-		virtual bool open() = 0;
-
 		// Processes the key obtained by the IGraphicLib from the user to update the game state
 		virtual void applyEvent(Keys key) = 0;
 		
