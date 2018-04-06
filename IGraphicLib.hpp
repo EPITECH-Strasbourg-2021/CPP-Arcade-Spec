@@ -39,10 +39,10 @@ namespace Arcade {
 
 		/* Rendering functions */
 		// Draws a PixelBox or the sprite if supported
-		virtual void drawPixelBox(PixelBox &) = 0;
+		virtual void drawPixelBox(PixelBox const &) = 0;
 
 		// Draws a TextBox
-		virtual void drawText(TextBox &) = 0;
+		virtual void drawText(TextBox const &) = 0;
 
 		/* EVENT HANDLING */
 		/* */
