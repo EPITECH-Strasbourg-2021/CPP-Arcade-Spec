@@ -5,6 +5,16 @@
 ** arcade
 */
 
+/*!
+ * @file IGraphicLib.hpp
+ * @brief Graphic libraries dedicated class interface
+ * @authors https://github.com/EPITECH-Strasbourg-2021/CPP-Arcade-Spec
+ *
+ * Interface used by graphic libraries
+ * All functions must be implemented correctly for the kernel to handle the graphic libraries.
+ *
+ */
+
 #pragma once
 
 #include <string>
@@ -13,62 +23,129 @@
 #include "TextBox.hpp"
 #include "Keys.hpp"
 
+/*!
+ * @namespace Arcade
+ * @brief Arcade project namespace
+ */
 namespace Arcade {
+
+	/*!
+	 * @class IGraphicLib
+	 * @brief Graphic libraries virtual class
+	 *
+	 * Purely virtual class that serves as the basis for all graphic libraries
+	 *
+	 */
 	class IGraphicLib {
 	public:
+
+		/*!
+		 * @brief Destructor
+		 *
+		 * IGraphicLib class's destructor
+		 *
+		 */
 		virtual ~IGraphicLib() = default;
 
-		/* Get the name of the library */
+		/*!
+		 * @brief Graphic library name's getter
+		 * @return a string containing the name of the graphic library
+		 */
 		virtual std::string getName() const = 0;
 
 		/* Window handling */
-		// Main loop condition
+		/*!
+		 * @brief Specifies whether the window is open or not
+		 * @return true if open, otherwise returns false
+		 */
 		virtual bool isOpen() const = 0;
 
-		// Closes the window => stop loop (go menu)
+		/*!
+		 * @brief Closes the rendering support
+		 *
+		 * Usually closes a window.
+		 * Some graphic library uses other rendering support.
+		 *
+		 */
 		virtual void closeRenderer() = 0;
 
-		// Opens the window => start loop
+		/*!
+		 * @brief Opens the rendering support
+		 * @param title : Title of the rendering support if supported
+		 *
+		 * Usually opens a window.
+		 * Some graphic library uses other rendering support.
+		 *
+		 */
 		virtual void openRenderer(std::string const &title) = 0;
 
-		// Clears the screen
+		/*!
+		 * @brief Clears the rendering support
+		 */
 		virtual void clearWindow() = 0;
 
-		// Displays the buffered frame to the screen
+		/*!
+		 * @brief Displays the buffered frame to the screen
+		 */
 		virtual void refreshWindow() = 0;
 
 		/* Rendering functions */
-		// Draws a PixelBox or the sprite if supported
+		/*!
+		 * @brief Draws a PixelBox
+		 */
 		virtual void drawPixelBox(PixelBox const &) = 0;
 
-		// Draws a TextBox
+		/*!
+		 * @brief Draws a TextBox
+		 */
 		virtual void drawText(TextBox const &) = 0;
 
 		/* EVENT HANDLING */
-		/* */
-		/* This part can seem complicated but the implementation is quite simple. */
-		/* */
-		/* pollEvent() fetches the events from the user and saves it */
-		/* inside an std::vector<Arcade::Keys> or std::list<Arcade::Keys>. */
-		/* It returns true if at least one new event was added to the list, false otherwise. */
-		/* */
-		/* getLastEvent() returns the first event of the list. (using front() and pop_front() methods) */
-		/* or Arcade::Keys::NONE if the list is empty. */
-		/* */
-		/* clearEvents() clears the list (using clear() method). */
-		/* */
+		/*!
+		 * @brief Fetches the events from the user and saves it
+		 * @return true if at least one command has been fetched, otherwise returns false
+		 *
+		 * Fetched commands are usually stored inside a std::vector<Arcade::Keys> or std::list<Arcade::Keys>
+		 *
+		 */
 		virtual bool pollEvents() = 0;
+
+		/*!
+		 * @brief Getter of the oldest command in memory
+		 * @return the first event of the list.
+		 *
+		 * The function deletes the command if it succeed to retrieves one,
+		 * using front() and pop_front() methods
+		 *
+		 */
 		virtual Keys getLastEvent() = 0;
+
+		/*!
+		 * @brief Clears the pending commands
+		 *
+		 * The function deletes all the commands currently stored.
+		 * They wont be accessible anymore, even with the getLastEvent() method.
+		 *
+		 */
 		virtual void clearEvents() = 0;
 
 		/* Context Info */
-		// get the X and Y max of the windows
+		/*!
+		 * @brief Getter from the rendering support dimensions
+		 * @return a two dimensions vector containing the width and the height of the rendering support
+		 */
 		virtual Vect<size_t> getScreenSize() const = 0;
 
-		// get the Y max of the windows
+		/*!
+		 * @brief Getter from the rendering support height
+		 * @return the height of the rendering support
+		 */
 		virtual size_t getMaxY() const = 0;
 
-		// get the X max of the windows
+		/*!
+		 * @brief Getter from the rendering support width
+		 * @return the width of the rendering support
+		 */
 		virtual size_t getMaxX() const = 0;
 	};
 };
